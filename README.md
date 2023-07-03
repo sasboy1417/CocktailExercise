@@ -2,7 +2,7 @@ How to run the tests.
 
 Navigate to the below URL for the latest job which ran:
 
-https://github.com/sasboy1417/CocktailExercise/actions/runs/5441096313
+https://github.com/sasboy1417/CocktailExercise/actions/runs/5441268678
 
 Click on Re-run all jobs button on the right corner of the screen
 
