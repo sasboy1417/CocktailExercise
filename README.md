@@ -12,12 +12,23 @@ When prompt click on the Re-Run jobs button:
 
 ![image](https://github.com/sasboy1417/CocktailExercise/assets/25165419/8bb9978c-ddf7-4bf9-b3d9-5e0677b6e9ae)
 
-The tests will now excute in the build.
+The tests will now excute in the job.
 
 ![image](https://github.com/sasboy1417/CocktailExercise/assets/25165419/b6578dab-f1b9-4b70-999c-4ca0d1da72be)
 
-After the build has completed a green checkmark should display.
-An HTML report will also be generated under the artifacts section which can be downloaded and opened in order to view the tests and their statuses.
+After the job has completed a green checkmark should display.
+An HTML report will also be generated under the artifacts section which can be downloaded in order to view the tests and their statuses.
 
 ![image](https://github.com/sasboy1417/CocktailExercise/assets/25165419/a0baf740-c2f3-4953-a7f0-2f9603abe2a0)
 
+
+
+Two non-functional tests, both which can be automated through **Postman**, that I would have designed would have been:
+
+1. Load tests. For this test, you can simulate a large number of concurrent users or requests and measure the response times of the API. This can be achived by clicking on the runner tab then on the performance tab and dragging over your collection. The number of virtual users can now be set and the collection run in order to view the responce times.
+
+   ![image](https://github.com/sasboy1417/CocktailExercise/assets/25165419/8a025be0-b92e-4827-ac07-9254a3a99491)
+
+
+
+2. Security tests.  This involves testing various security aspects, such as authentication and authorization. Assuming this API required authentication such as basic auth, bearer token or authentication in the headers one would test with invalid credentials and verify the correct reponse status comes back such as 401.
