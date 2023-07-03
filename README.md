@@ -25,7 +25,7 @@ An HTML report will also be generated under the artifacts section which can be d
 
 Two non-functional tests, both which can be automated through **Postman**, that I would have designed would have been:
 
-1. Load tests. For this test, you can simulate a large number of concurrent users or requests and measure the response times of the API. This can be achived by clicking on the runner tab then on the performance tab and dragging over your collection. The number of virtual users can now be set and the collection run in order to view the responce times.
+1. Performance tests. For this test, you can simulate a large number of concurrent users or requests and measure the response times of the API and assess the overall performance, stability, and behavior of the API under different scenarios.. This can be achived by clicking on the runner tab then on the performance tab and dragging over your collection. The number of virtual users can now be set and the collection run in order to view the responce times.
 
    ![image](https://github.com/sasboy1417/CocktailExercise/assets/25165419/8a025be0-b92e-4827-ac07-9254a3a99491)
 
