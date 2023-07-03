@@ -18,6 +18,7 @@ test.describe("GET Ingredients By Name", () =>
     await cocktailApi.assertApiResponseStatus(alcoholicIngredient, 200);
     await cocktailApi.assertIfIngredientPresent(alcoholicIngredient);
     await cocktailApi.assertIfIngredientIdPresent(alcoholicIngredient);
+    await cocktailApi.assertIfDescriptionPresent(alcoholicIngredient);
     await cocktailApi.assertIfAlcohol(alcoholicIngredient, "Yes");
     const abvIndicator = await cocktailApi.getAbvContent(alcoholicIngredient);        
     expect(abvIndicator).not.toBe(null);
@@ -35,6 +36,7 @@ test.describe("GET Ingredients By Name", () =>
     await cocktailApi.assertApiResponseStatus(nonAlcoholicIngredient, 200);
     await cocktailApi.assertIfIngredientPresent(nonAlcoholicIngredient);
     await cocktailApi.assertIfIngredientIdPresent(nonAlcoholicIngredient);
+    await cocktailApi.assertIfDescriptionPresent(nonAlcoholicIngredient);
     await cocktailApi.assertIfAlcohol(nonAlcoholicIngredient, "No");
     const abvIndicator = await cocktailApi.getAbvContent(nonAlcoholicIngredient);        
     expect(abvIndicator).toBe(null);

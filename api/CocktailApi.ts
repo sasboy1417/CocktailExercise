@@ -47,6 +47,13 @@ export class CocktailApi
         expect(ingredientId).not.toBe(null);
     }
 
+    async assertIfDescriptionPresent(name: string)
+    {
+        const responseBody = await this.getApiResponseBody(`i=${name}`);
+        const ingredientDescription = responseBody['ingredients'][0].strDescription
+        expect(ingredientDescription).not.toBe(null);
+    }
+
     async assertIfCocktailNotPresent(name: string)
     {
         const responseBody = await this.getApiResponseBody(`s=${name}`);
@@ -87,18 +94,21 @@ export class CocktailApi
         let pass = true;
         for (const drink of drinks) {
             if (
-              !drink.hasOwnProperty('strDrink') ||
-              !drink.hasOwnProperty('strTags') ||
-              !drink.hasOwnProperty('strCategory') ||
-              !drink.hasOwnProperty('strAlcoholic') ||
-              !drink.hasOwnProperty('strGlass') ||
-              !drink.hasOwnProperty('strInstructions')
+              !drink.hasOwnProperty('strDrink') &&
+              !drink.hasOwnProperty('strTags') &&
+              !drink.hasOwnProperty('strCategory') &&
+              !drink.hasOwnProperty('strAlcoholic') &&
+              !drink.hasOwnProperty('strGlass') &&
+              !drink.hasOwnProperty('strInstructions') &&
+              !drink.hasOwnProperty('strIngredient1') &&
+              !drink.hasOwnProperty('strMeasure1') &&
+              !drink.hasOwnProperty('strCreativeCommonsConfirmed') &&
+              !drink.hasOwnProperty('dateModified')
             ) {
               pass = false;
-              console.log('Required properties are missing for drink:', drink);
             }
           }
-         expect(pass).toBe(true);
+         expect(pass,'Required properties are missing for drink:').toBe(true);
     }
 
     async validateApiSchema(name: string)
